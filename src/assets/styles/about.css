@@ -1,0 +1,72 @@
+.about {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.about__title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about__description {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.about__techCard {
+  display: flex;
+  align-items: center;       
+  justify-content: center; 
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  color: var(--text-white);
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  padding: 0 10px;           
+  box-sizing: border-box;
+}
+
+.about__techIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;            
+}
+
+.about__techName {
+  display: none;              /* hidden by default */
+  white-space: nowrap;
+  font-weight: 500;
+  margin-left: 10px;
+  transform: translateX(-20px); 
+  transition: transform 0.3s ease;
+}
+
+.about__techCard:hover {
+  width: 200px;              
+  background-color: var(--primary);
+  color: var(--text-dark)
+}
+
+.about__techCard:hover .about__techName {
+  display: inline-flex;       /* show text on hover */
+  transform: translateX(0);  
+}
