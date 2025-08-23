@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: calc(0.1rem + 7vw);
+    font-weight: bold;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}

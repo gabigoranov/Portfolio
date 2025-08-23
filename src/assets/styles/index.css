@@ -13,6 +13,11 @@
   --primary: #FFF;
   --text-dark: black;
   --text-white: whtie;
+  --background: #121212;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

@@ -12,6 +12,10 @@ export default function Hero() {
                 <a href=''>View Projects</a>
                 <a href=''>Contact Me</a>
             </div>
+            <div className="scroll-indicator">
+                <div className="scroll-dot"></div>
+            </div>
+
         </section>
     )
 }
