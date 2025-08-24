@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../assets/styles/hero.css'
 import { FiMapPin } from "react-icons/fi";
 
