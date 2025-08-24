@@ -5,9 +5,9 @@ export default function Header() {
         <header>
             <span className="logo">Gabriel</span>
             <ul className="navbar">
-                <li className="navbar__item">About</li>
-                <li className="navbar__item">Projects</li>
-                <li className="navbar__item">Contact</li>
+                <li className="navbar__item"><a className='nav__link' href='#about'>About</a></li>
+                <li className="navbar__item"><a className='nav__link' href='#projects'>Projects</a></li>
+                <li className="navbar__item"><a className='nav__link' href="#contact">Contact</a></li>
             </ul>
         </header>
     )

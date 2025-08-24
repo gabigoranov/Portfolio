@@ -24,7 +24,7 @@ const techs: Tech[] = [
 
 export default function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2 className="about__title">About Me</h2>
       <p className="about__description">
         I’m a web & mobile developer with experience in building modern,

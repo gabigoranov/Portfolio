@@ -1,7 +1,7 @@
 .hero {
     display: flex;
     flex-flow: column;
-    gap: var(--big-indent);
+    gap: var(--space-md);
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,17 @@
 }
 
 .hero__desc {
-    margin-left: clamp(0rem, calc(1rem + 1vw), 3rem);
+    margin-left: clamp(0rem, calc(0.3rem + 1vw), 3rem);
+    opacity: 0.6;
+}
+
+.hero__location{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: start;
+  margin-left: clamp(0rem, calc(0.3rem + 1vw), 3rem);
+  opacity: 0.8;
 }
 
 .hero__cta {

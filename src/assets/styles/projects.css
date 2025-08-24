@@ -1,0 +1,11 @@
+.projects {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.projects__container{
+    width: 100%;
+    padding: 2rem 0;
+}

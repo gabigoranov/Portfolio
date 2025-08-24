@@ -1,12 +1,17 @@
 header {
     display: flex;
-    width: auto;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background: var(--background) !important;
+    z-index: 10000;
+    height: 60px;
 }
 
 .logo{
-    font-size: calc(0.1rem + 7vw);
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -14,4 +19,17 @@ header {
     list-style: none;
     display: flex;
     gap: 1rem;
+}
+
+.nav__link{
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    color: var(--text-white);
+    font-weight: normal;
+}
+
+.nav__link:hover{
+    transform: scale(110%);
+    color: var(--text-white);
+    font-weight: bold;
 }
