@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "../assets/styles/contact.css";
 import { MdMailOutline, MdOutlinePhone } from "react-icons/md";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+import ContactComponent from "./ContactComponent";
 
 interface FormData {
   firstName: string;
@@ -67,7 +69,7 @@ export default function Contact() {
             <div className="contact__names">
             <div>
                 <input
-                className="contact__input"
+                className="contact__input card"
                 name="firstName"
                 type="text"
                 placeholder="First Name"
@@ -80,7 +82,7 @@ export default function Contact() {
             </div>
             <div>
                 <input
-                className="contact__input"
+                className="contact__input card"
                 name="lastName"
                 type="text"
                 placeholder="Last Name"
@@ -97,7 +99,7 @@ export default function Contact() {
             <input
                 type="text"
                 name="email"
-                className="contact__input"
+                className="contact__input card"
                 placeholder="Email Address"
                 value={form.email}
                 onChange={handleChange}
@@ -111,7 +113,7 @@ export default function Contact() {
             <textarea
                 name="message"
                 id="message-textarea"
-                className="contact__textarea"
+                className="contact__textarea card"
                 placeholder="Message"
                 value={form.message}
                 onChange={handleChange}
@@ -121,30 +123,15 @@ export default function Contact() {
             )}
             </div>
 
-            <button className="contact__button" type="submit">
+            <button className="contact__button card" type="submit">
             Send
             </button>
         </form>
         <div className="contact-info__container">
-            <div className="contact-info">
-                <div className="contact-info__icon">
-                <MdMailOutline />
-                </div>
-                <div className="contact-info__text">
-                <h4>Email</h4>
-                <p>gabi.goranov.work@gmail.com</p>
-                </div>
-            </div>
-
-            <div className="contact-info">
-                <div className="contact-info__icon">
-                <MdOutlinePhone />
-                </div>
-                <div className="contact-info__text">
-                <h4>Phone</h4>
-                <p>+359 89 658 2578</p>
-                </div>
-            </div>
+            <ContactComponent icon={MdMailOutline} title="Email" value="gabi.goranov.work@gmail.com"/>
+            <ContactComponent icon={MdOutlinePhone} title="Phone" value="+359 89 658 2578"/>
+            <ContactComponent icon={FaGithub} title="Github" value="gabigoranov"/>
+            <ContactComponent icon={FaInstagram} title="Instagram" value="gabi.goranov"/>
         </div>
       </div>
       

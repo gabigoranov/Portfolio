@@ -12,7 +12,6 @@ export default function Certification() {
                     "FCE (B2 exam) – achieved C1-level English proficiency"
                 ]}/>
 
-                <a className='certification__button'>View More - Gallery</a>
             </div>
             <div className='certification__gallery'>
                 <div className='certification__img1 certification__img'>a</div>

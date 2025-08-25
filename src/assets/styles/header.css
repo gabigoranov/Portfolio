@@ -1,14 +1,38 @@
 header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background: var(--background) !important;
-    z-index: 10000;
-    height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  z-index: 10000;
+  height: 60px;
+  width: 100%;
+  max-width: 1024px;
+
+  background: color-mix(in srgb, var(--lighter-background) 80%, transparent);
+  backdrop-filter: blur(15px);
+  transition: width 1s ease-in-out, height 0.2s ease-in-out;
+  transform-origin: center;
+
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+
+  border: solid 0.5px var(--secondary);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
+
+.header--scrolled {
+  width: 50%;
+}
+
+header:hover{
+    height: 70px;
+}
+
+
 
 .logo{
     font-size: 2rem;

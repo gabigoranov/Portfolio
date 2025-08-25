@@ -27,6 +27,7 @@
     border-radius: 10px;
     border: none;
     box-sizing: border-box;
+    background: var(--lighter-background);
 }
 
 .contact__textarea{
@@ -99,7 +100,7 @@
 
 @media (min-width: 1024px) {
     .contact__form{
-        margin: 1rem 0;
+        margin: 0;
     }
 
     .contact__container{
@@ -111,5 +112,11 @@
     .contact-info__container{
         flex-flow: column;
         width: 50%;
+        gap: 0rem;
+        justify-content: space-between;
+    }
+
+    .contact-info {
+        margin: 0;
     }
 }

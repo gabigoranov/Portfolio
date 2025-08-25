@@ -123,6 +123,10 @@
   transform: scale(120%) translate(-50%, +20%);
 }
 
+.certification__img2:hover{
+  transform: scale(120%) translate(-100%, +20%);
+}
+
 @media (min-width: 1024px) {
   .certification{
     flex-flow: row;

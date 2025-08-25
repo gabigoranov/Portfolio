@@ -10,11 +10,12 @@
   --small-indent: 1rem;
   --indent: 3rem;
   --big-indent: 6rem;
-  --primary: #FFF;
+  --secondary: #313131;
+  --primary: #FFF; 
   --text-dark: black;
   --text-white: whtie;
   --background: #121212;
-  --lighter-background: #2b2b2b;
+  --lighter-background: #1d1d1d;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -99,4 +100,18 @@ p {
 section {
   padding-top: var(--space-lg);
   padding-bottom: var(--space-lg);
+}
+
+.card{
+  border: solid 0.5px var(--secondary);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(101%);
+}
+
+textarea{
+  resize: none;
 }
