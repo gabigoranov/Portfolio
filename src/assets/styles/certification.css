@@ -93,8 +93,8 @@
   background: grey;
   color: grey;
   position: absolute;
-  bottom: 30%;           /* stick to bottom */
-  left: 60%;           /* center horizontally */
+  bottom: 0;           /* stick to bottom */
+  left: 50%;           /* center horizontally */
   transform-origin: bottom left; 
   transform: translateX(-50%) rotate(20deg); /* center + rotation */
 }

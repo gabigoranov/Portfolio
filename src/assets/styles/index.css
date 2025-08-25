@@ -115,3 +115,9 @@ section {
 textarea{
   resize: none;
 }
+
+@media (max-width: 724px) {
+  #root{
+    padding: 1rem !important;
+  }
+}

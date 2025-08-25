@@ -1,14 +1,23 @@
+.header-container{
+    position: sticky;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 60px;
+    z-index: 10000000;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 2rem;
+  position: relative;
+  top: 0rem;
   left: 50%;
-  z-index: 10000;
+  z-index: 10000000;
   height: 60px;
   width: 100%;
-  max-width: 1000px;
 
   background: color-mix(in srgb, var(--lighter-background) 80%, transparent);
   backdrop-filter: blur(15px);

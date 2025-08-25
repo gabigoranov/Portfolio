@@ -12,13 +12,15 @@ export default function Header() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
     return (
-        <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
-            <span className="logo">Gabriel</span>
-            <ul className="navbar">
-                <li className="navbar__item"><a className='nav__link' href='#about'>About</a></li>
-                <li className="navbar__item"><a className='nav__link' href='#projects'>Projects</a></li>
-                <li className="navbar__item"><a className='nav__link' href="#contact">Contact</a></li>
-            </ul>
-        </header>
+        <div className='header-container'>
+            <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
+                <span className="logo">Gabriel</span>
+                <ul className="navbar">
+                    <li className="navbar__item"><a className='nav__link' href='#about'>About</a></li>
+                    <li className="navbar__item"><a className='nav__link' href='#projects'>Projects</a></li>
+                    <li className="navbar__item"><a className='nav__link' href="#contact">Contact</a></li>
+                </ul>
+            </header>
+        </div>
     )
 }
