@@ -16,6 +16,12 @@
     text-align: start;
 }
 
+@media (max-width: 768px) {
+    .education__image{
+        margin: 3rem auto;
+    }
+}
+
 @media (min-width: 1024px) {
     .education{
         flex-flow: row;
