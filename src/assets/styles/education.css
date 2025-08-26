@@ -27,6 +27,10 @@
         flex-flow: row;
         gap: var(--space-md);
     }
+    
+    .education > div {
+        max-width: 50%;;
+    }
 
     .education__image{
         max-width: 300px;

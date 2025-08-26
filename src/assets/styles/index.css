@@ -22,6 +22,11 @@
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 6rem;
+
+  --w-center: 500px;
+  --h-center: 300px;
+  --w-small: calc(var(--w-center) * 0.75);
+  --h-small: calc(var(--h-center) * 0.75);
 }
 
 html {

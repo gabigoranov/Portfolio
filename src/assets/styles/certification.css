@@ -57,87 +57,42 @@
 }
 
 .certification__gallery{
-    position: relative;
-    width: 100%;
-    height: 450px;
-}
-
-.certification__img1 {
-  height: 300px;
-  width: 200px;
-  background: darkgrey;
-  color: darkgrey;
-  position: absolute;
-  bottom: 0;           /* stick to bottom */
-  left: 50%;           /* center horizontally */
-  transform-origin: bottom left; /* rotate around bottom-left if needed */
-  transform: translateX(-50%);   /* just center horizontally */
-  z-index: 100;
-}
-
-.certification__img2 {
-  height: calc(300px * 0.9);
-  width: calc(200px * 0.9);
-  background: grey;
-  color: grey;
-  position: absolute;
-  bottom: 0;           /* stick to bottom */
-  left: 50%;           /* center horizontally */
-  transform-origin: bottom left; 
-  transform: translateX(-50%) rotate(-20deg); /* center + rotation */
-}
-
-.certification__img3 {
-  height: calc(300px * 0.9);
-  width: calc(200px * 0.9);
-  background: grey;
-  color: grey;
-  position: absolute;
-  bottom: 0;           /* stick to bottom */
-  left: 50%;           /* center horizontally */
-  transform-origin: bottom left; 
-  transform: translateX(-50%) rotate(20deg); /* center + rotation */
-}
-
-.certification__img4 {
-  display: none;
-  height: 300px;
-  width: 200px;
-  background: darkblue;
-  color: darkblue;
-  position: absolute;
-  bottom: -20%;           /* stick to bottom */
-  left: 75%;           /* center horizontally */
-  transform-origin: bottom left; /* rotate around bottom-left if needed */
-  transform: translateX(-50%);   /* just center horizontally */
-  z-index: 100;
-  transform: translateX(-50%) rotate(-2deg); /* center + rotation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
 }
 
 .certification__img{
-  transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms ease, top 300ms ease, width 300ms ease, height 300ms ease;
+  will-change: transform, top, width, height;
+  border-radius: 6px;
 }
 
-.certification__img:hover{
-  z-index: 101;
-  transform: scale(120%) translate(-50%, +20%);
+#image--center {
+  z-index: 30;
 }
 
-.certification__img2:hover{
-  transform: scale(120%) translate(-100%, +20%);
+#image--back,
+#image--front {
+  z-index: 20;
 }
+
+.one{ background: red; }
+.two{ background: green; }
+.three{ background: blue; }
+
 
 @media (min-width: 1024px) {
   .certification{
     flex-flow: row;
     gap: var(--space-md);
-  }
-
-  .certification__gallery{
-    height: 320px;
-  }
-
-  .certification__img4{
-    display: block;
   }
 }
