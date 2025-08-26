@@ -27,7 +27,7 @@ export default function Certification() {
     };
 
     const applyPositions = () => {
-      const tops = ['25%', '50%', '75%'];
+      const tops = ['35%', '50%', '65%'];
       const sizes = getSizes();
       stack.forEach((el, i) => {
         el.style.transition = 'transform 300ms ease, top 300ms ease, width 300ms ease, height 300ms ease';
@@ -47,54 +47,65 @@ export default function Certification() {
 
     applyPositions();
 
-    const pointerDownHandler = (e: PointerEvent) => {
+    const getY = (e: PointerEvent | TouchEvent) => {
+      if ('touches' in e) return e.touches[0].clientY;
+      return (e as PointerEvent).clientY;
+    };
+
+    const downHandler = (e: PointerEvent | TouchEvent) => {
       if (e.target !== stack[1]) return;
       dragging = true;
-      startY = e.clientY;
+      startY = getY(e);
       currentY = startY;
       stack[1].style.transition = 'none';
-      if (e.pointerId && typeof stack[1].setPointerCapture === "function") {
+
+      if ('pointerId' in e && typeof stack[1].setPointerCapture === 'function') {
         try { stack[1].setPointerCapture(e.pointerId); } catch {}
       }
+
       e.preventDefault();
     };
 
-    const pointerMoveHandler = (e: PointerEvent) => {
+    const moveHandler = (e: PointerEvent | TouchEvent) => {
       if (!dragging) return;
-      currentY = e.clientY;
+      currentY = getY(e);
       const dy = currentY - startY;
       stack[1].style.transform = `translate(-50%, -50%) translateY(${dy}px)`;
+      e.preventDefault(); // prevent scrolling while dragging
     };
 
-    const pointerUpHandler = (e: PointerEvent) => {
+    const upHandler = (e: PointerEvent | TouchEvent) => {
       if (!dragging) return;
       dragging = false;
       const dy = currentY - startY;
       const threshold = stack[1].offsetHeight * 0.6;
 
-      if (dy > threshold) {
-        stack.unshift(stack.pop()!);
-      } else if (dy < -threshold) {
-        stack.push(stack.shift()!);
-      }
+      if (dy > threshold) stack.unshift(stack.pop()!);
+      else if (dy < -threshold) stack.push(stack.shift()!);
 
       applyPositions();
 
-      if (e && e.pointerId && typeof stack[1].releasePointerCapture === "function") {
+      if ('pointerId' in e && typeof stack[1].releasePointerCapture === 'function') {
         try { stack[1].releasePointerCapture(e.pointerId); } catch {}
       }
     };
 
-    galleryRef.current.addEventListener('pointerdown', pointerDownHandler);
-    window.addEventListener('pointermove', pointerMoveHandler);
-    window.addEventListener('pointerup', pointerUpHandler);
-    window.addEventListener('pointercancel', pointerUpHandler);
+    galleryRef.current.addEventListener('pointerdown', downHandler);
+    galleryRef.current.addEventListener('touchstart', downHandler, { passive: false });
+    window.addEventListener('pointermove', moveHandler);
+    window.addEventListener('touchmove', moveHandler, { passive: false });
+    window.addEventListener('pointerup', upHandler);
+    window.addEventListener('touchend', upHandler);
+    window.addEventListener('pointercancel', upHandler);
 
     return () => {
-      galleryRef.current?.removeEventListener('pointerdown', pointerDownHandler);
-      window.removeEventListener('pointermove', pointerMoveHandler);
-      window.removeEventListener('pointerup', pointerUpHandler);
-      window.removeEventListener('pointercancel', pointerUpHandler);
+      galleryRef.current?.removeEventListener('pointerdown', downHandler);
+      galleryRef.current?.removeEventListener('touchstart', downHandler);
+      window.removeEventListener('pointermove', moveHandler);
+      window.removeEventListener('touchmove', moveHandler);
+      window.removeEventListener('pointerup', upHandler);
+      window.removeEventListener('touchend', upHandler);
+      window.removeEventListener('pointercancel', upHandler);
     };
   }, []);
 
@@ -105,13 +116,22 @@ export default function Certification() {
         <UnorderedList elements={[
           "5th place, NOIT 2025, Software Application (10th grade)",
           "1st place, 11th Students' Scientific Session, BAS",
-          "FCE (B2 exam) – achieved C1-level English proficiency"
+          "FCE (B2 exam) – achieved C1-level English proficiency",
+          'National autumn tournament "John Atanasov" 2024 – 4th place',
+          "25th Students' Conference of HSSIMI – Golden Medal",
+          "25th Students' Section of HSSIMI – Golden Medal"
         ]}/>
       </div>
       <div className="certification__gallery" ref={galleryRef}>
-        <div className="certification__img one card" id="image--back" ref={backRef}></div>
-        <div className="certification__img two card" id="image--center" ref={centerRef}></div>
-        <div className="certification__img three card" id="image--front" ref={frontRef}></div>
+        <div className="certification__img one card" id="image--back" ref={backRef}>
+          <p>This is a certificate I haven't scanned yet.</p>
+        </div>
+        <div className="certification__img two card" id="image--center" ref={centerRef}>
+          <p>This is a certificate I haven't scanned yet.</p>
+        </div>
+        <div className="certification__img three card" id="image--front" ref={frontRef}>
+          <p>This is a certificate I haven't scanned yet.</p>
+        </div>
       </div>
     </section>
   );
