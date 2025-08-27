@@ -102,6 +102,10 @@
   animation: scroll 2s infinite;
 }
 
+.hero__desc {
+  font-size: clamp(1.2rem, calc(2vw + 1rem), 2rem);
+}
+
 @keyframes scroll {
   0%   { transform: translate(-50%, 0); opacity: 1; }
   50%  { transform: translate(-50%, 20px); opacity: 0; }

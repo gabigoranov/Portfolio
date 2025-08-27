@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className="footer card">
       <div className="footer__content">
         <p className="footer__copy">© {year} Gabriel Goranov. All rights reserved.</p>
 

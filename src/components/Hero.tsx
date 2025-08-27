@@ -7,7 +7,7 @@ export default function Hero() {
             <div className="section-wrapper">
                 <div className="hero__text">
                     <h1 className='hero__title'>Gabriel Goranov</h1>
-                    <h3 className="hero__desc">Full Stack Developer</h3>
+                    <h2 className="hero__desc">Full Stack Developer</h2>
                     <p className='hero__location'><FiMapPin /> Bulgaria, Montana</p>
                 </div>
                 <div className="hero__cta">

@@ -1,7 +1,7 @@
 .footer {
   padding: 2rem 1rem;
-  background: #111;
-  color: #f1f1f1;
+  background: var(--med-background);
+  color: var(--text-white);
   text-align: center;
   border-radius: 10px;
 }
@@ -27,7 +27,7 @@
 }
 
 .footer__socials a {
-  color: #f1f1f1;
+  color: var(--text-white);
   transition: all 0.2s ease;
 }
 

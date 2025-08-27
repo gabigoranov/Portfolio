@@ -19,7 +19,7 @@ header {
   height: 60px;
   width: 100%;
 
-  background: color-mix(in srgb, var(--lighter-background) 80%, transparent);
+  background: color-mix(in srgb, var(--lighter-background) 75%, transparent);
   backdrop-filter: blur(15px);
   transition: width 1s ease-in-out, height 0.2s ease-in-out;
   transform-origin: center;
@@ -67,10 +67,21 @@ header:hover{
     font-weight: bold;
 }
 
+.navbar__item{
+    display: flex;
+    align-items: center;
+}
+
+.header__navbar-container{
+    display: flex;
+    gap: 1rem;
+}
+
 @media (max-width: 768px) {
     header{
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         max-width: 90vw;
+        justify-content: center;
     }
 
     .header--scrolled{

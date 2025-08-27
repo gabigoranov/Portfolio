@@ -50,7 +50,8 @@
   transition: transform 0.3s ease;
 }
 
-.about__techCard:hover {
+.about__techCard--active {
+  position: relative;
   width: clamp(50px, 50%, 200px);              
   background-color: var(--primary);
   color: var(--text-dark);
@@ -58,7 +59,7 @@
   transition: background-color 0.3s ease;
 }
 
-.about__techCard:hover .about__techName {
+.about__techCard--active .about__techName {
   display: inline-flex;       /* show text on hover */
   transform: translateX(0);  
 }

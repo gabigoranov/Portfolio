@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/about.css";
 import { FaReact, FaPython, FaDatabase, FaHtml5, FaCss3Alt, FaJs, FaGit, FaFigma } from "react-icons/fa";
 import { SiTypescript, SiFlutter, SiDotnet } from "react-icons/si";
@@ -23,6 +23,12 @@ const techs: Tech[] = [
 ];
 
 export default function About() {
+  const [active, setActive] = useState<string | null>(null);
+
+  const handleClick = (name: string) => {
+    setActive((prev) => (prev === name ? null : name));
+  };
+
   return (
     <section className="about" id="about">
       <h2 className="about__title">About Me</h2>
@@ -34,7 +40,10 @@ export default function About() {
 
       <div className="about__techGrid">
         {techs.map((tech) => (
-          <div key={tech.name} className="about__techCard">
+          <div key={tech.name} className={`about__techCard ${
+              active === tech.name ? "about__techCard--active" : ""
+            }`}
+            onClick={() => handleClick(tech.name)}>
             <span className="about__techIcon">{tech.icon}</span>
             <span className="about__techName">{tech.name}</span>
           </div>

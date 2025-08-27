@@ -13,7 +13,7 @@ export default function ContactComponent({icon: Icon, title, value} : Props) {
             <Icon />
             </div>
             <div className="contact-info__text">
-            <h4>{title}</h4>
+            <span className="contact-info__title">{title}</span>
             <p>{value}</p>
             </div>
         </div>

@@ -7,10 +7,11 @@ import Education from './components/Education'
 import Certification from './components/Certification'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <Hero />
       <About />
@@ -19,7 +20,7 @@ function App() {
       <Certification />
       <Contact />
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 
