@@ -80,6 +80,7 @@
 
 .contact-info__text{
     height: 4rem;
+    width: 50%;
 }
 
 .contact-info__text > p {
@@ -114,6 +115,12 @@
   .contact-info__container{
     width: 100%;
   }
+}
+
+@media (max-width: 350px) {
+    .contact-info__text > p {
+        font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 1024px) {
