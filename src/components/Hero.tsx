@@ -11,8 +11,8 @@ export default function Hero() {
                     <p className='hero__location'><FiMapPin /> Bulgaria, Montana</p>
                 </div>
                 <div className="hero__cta">
-                    <a href=''>View Projects</a>
-                    <a href=''>Contact Me</a>
+                    <a href='#projects'>View Projects</a>
+                    <a href='#contact'>Contact Me</a>
                 </div>
                 <div className="scroll-indicator">
                     <div className="scroll-dot"></div>

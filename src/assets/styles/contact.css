@@ -94,6 +94,11 @@
   font-weight: 600;
 }
 
+.contact__error{
+    opacity: 0.5;
+    font-size: medium;
+}
+
 @media (max-width: 768px) {
     .contact-info{
         padding: 0rem 0.5rem;
