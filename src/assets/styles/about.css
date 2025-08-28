@@ -17,23 +17,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  gap: 0px;
-  max-width: 600px;
+  gap: 0.5rem;
+  max-width: 800px;
 }
 
 .about__techCard {
   display: flex;
   align-items: center;       
   justify-content: center; 
-  width: 80px;
   height: 80px;
   background-color: transparent;
   color: var(--text-white);
   border-radius: 12px;
   cursor: pointer;
   overflow: hidden;
-  padding: 0 10px;           
+  padding: 1rem 2rem;           
   box-sizing: border-box;
+}
+
+.about__techCard .about__techName {
+  display: inline-flex;       /* show text on hover */
+  transform: translateX(0);  
 }
 
 .about__techIcon {
@@ -59,7 +63,4 @@
   transition: background-color 0.3s ease;
 }
 
-.about__techCard--active .about__techName {
-  display: inline-flex;       /* show text on hover */
-  transform: translateX(0);  
-}
+
