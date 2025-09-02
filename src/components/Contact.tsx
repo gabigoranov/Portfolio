@@ -47,12 +47,30 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      console.log("Form submitted:", form);
-      setForm({ firstName: "", lastName: "", email: "", message: "" });
-      setErrors({});
+      const formData = new FormData();
+      formData.append('firstName', form.firstName);
+      formData.append('lastName', form.lastName);
+      formData.append('email', form.email);
+      formData.append('message', form.message);
+
+      const response = await fetch('https://formspree.io/f/manddzdb', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert('Thank you for your message!');
+        setForm({ firstName: "", lastName: "", email: "", message: "" });
+        setErrors({});
+      } else {
+        alert('There was a problem submitting your message.');
+      }
     }
   };
 
@@ -66,75 +84,74 @@ export default function Contact() {
       </p>
       <div className="contact__container">
         <form className="contact__form" onSubmit={handleSubmit}>
-            <div className="contact__names">
+          <div className="contact__names">
             <div>
-                <input
+              <input
                 className="contact__input card"
                 name="firstName"
                 type="text"
                 placeholder="First Name"
                 value={form.firstName}
                 onChange={handleChange}
-                />
-                {errors.firstName && (
+              />
+              {errors.firstName && (
                 <span className="contact__error">{errors.firstName}</span>
-                )}
+              )}
             </div>
             <div>
-                <input
+              <input
                 className="contact__input card"
                 name="lastName"
                 type="text"
                 placeholder="Last Name"
                 value={form.lastName}
                 onChange={handleChange}
-                />
-                {errors.lastName && (
+              />
+              {errors.lastName && (
                 <span className="contact__error">{errors.lastName}</span>
-                )}
+              )}
             </div>
-            </div>
+          </div>
 
-            <div>
+          <div>
             <input
-                type="text"
-                name="email"
-                className="contact__input card"
-                placeholder="Email Address"
-                value={form.email}
-                onChange={handleChange}
+              type="text"
+              name="email"
+              className="contact__input card"
+              placeholder="Email Address"
+              value={form.email}
+              onChange={handleChange}
             />
             {errors.email && (
-                <span className="contact__error">{errors.email}</span>
+              <span className="contact__error">{errors.email}</span>
             )}
-            </div>
+          </div>
 
-            <div>
+          <div>
             <textarea
-                name="message"
-                id="message-textarea"
-                className="contact__textarea card"
-                placeholder="Message"
-                value={form.message}
-                onChange={handleChange}
+              name="message"
+              id="message-textarea"
+              className="contact__textarea card"
+              placeholder="Message"
+              value={form.message}
+              onChange={handleChange}
             ></textarea>
             {errors.message && (
-                <span className="contact__error">{errors.message}</span>
+              <span className="contact__error">{errors.message}</span>
             )}
-            </div>
+          </div>
 
-            <button className="contact__button card" type="submit">
+          <button className="contact__button card" type="submit">
             Send
-            </button>
+          </button>
         </form>
         <div className="contact-info__container">
-            <ContactComponent icon={MdMailOutline} title="Email" value="gabi.goranov.work@gmail.com"/>
-            <ContactComponent icon={MdOutlinePhone} title="Phone" value="+359 89 658 2578"/>
-            <ContactComponent icon={FaGithub} title="Github" value="gabigoranov"/>
-            <ContactComponent icon={FaInstagram} title="Instagram" value="gabi.goranov"/>
+          <ContactComponent icon={MdMailOutline} title="Email" value="gabi.goranov.work@gmail.com"/>
+          <ContactComponent icon={MdOutlinePhone} title="Phone" value="+359 89 658 2578"/>
+          <ContactComponent icon={FaGithub} title="Github" value="gabigoranov"/>
+          <ContactComponent icon={FaInstagram} title="Instagram" value="gabi.goranov"/>
         </div>
       </div>
-      
     </section>
   );
 }

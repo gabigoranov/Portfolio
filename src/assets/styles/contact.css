@@ -28,6 +28,14 @@
     border: none;
     box-sizing: border-box;
     background: var(--lighter-background);
+    position: relative; /* Add this line */
+}
+
+.contact__error {
+    opacity: 0.5;
+    font-size: medium;
+    display: block; /* Add this line */
+    max-width: 100%; /* Add this line */
 }
 
 .contact__textarea{
@@ -92,11 +100,6 @@
 .contact-info__title {
   font-size: clamp(1rem, calc(1.5vw + 1rem), 1.5rem);
   font-weight: 600;
-}
-
-.contact__error{
-    opacity: 0.5;
-    font-size: medium;
 }
 
 @media (max-width: 768px) {
