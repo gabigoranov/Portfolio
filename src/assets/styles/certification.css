@@ -103,17 +103,6 @@
 .two{ background: var(--secondary); }
 .three{ background: var(--lighter-background); }
 
-@media (max-width: 600px) {
-  .certification__img {
-    max-width: 300px;
-    max-height: 180px;
-  }
-
-  #image--center {
-    max-width: 350px;
-    max-height: 210px;
-  }
-}
 
 @media (min-width: 1024px) {
   .certification{

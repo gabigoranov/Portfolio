@@ -1,44 +1,54 @@
 [
-        {
-        "image": "/images/clockr.png",
-        "title": "Freshly - Online Farmers' Market",
-        "descriptions": [
-            "Developed a full-stack online farmers' market platform with a .NET Core MVC website for users, sellers, and organizations, enabling seamless product management and orders.",
-            "Created a Flutter mobile application allowing users to browse products, place orders, track deliveries, and communicate with local farmers in real-time.",
-            "Integrated secure authentication, role-based access, email services, and intuitive interfaces across web and mobile, ensuring a smooth experience for both customers and sellers."
-        ],
-        "technologies": [
-            ".NET", "EFC", "SQL Server", "Flutter", "Firebase"
-        ],
-        "github": "https://github.com/gabigoranov/farmers-market",
-        "demo": "https://freshly-groceries.com"
-    },
-    {
-        "image": "/images/clockr.png",
-        "title": "ClockR - Modern chess clock",
-        "descriptions": [
-            "Developed and published a feature-rich mobile application using Flutter, designed for chess enthusiasts needing a reliable digital chess clock.",
-            "Implemented fully customizable time controls, allowing users to set classical, rapid, blitz, or custom game modes tailored to their preferences.",
-            "Integrated alarms and notifications for move timing, game start/end, and turn changes, enhancing usability and improving game experience."
-        ],
-        "technologies": [
-            "Flutter"
-        ],
-        "github": "https://github.com/gabigoranov/ClockR",
-        "demo": "https://play.google.com/store/apps/details?id=com.clockr.chess"
-    },
-    {
-        "image": "/images/clockr.png",
-        "title": "Predicting sketches with KNN",
-        "descriptions": [
-            "Built a machine learning-powered application that classifies user-drawn sketches in real-time using a custom KNN algorithm.",
-            "Preprocessed sketches with PCA and StandardScaler to improve model accuracy and reduce computational load for fast predictions.",
-            "Designed an interactive React-based interface allowing users to draw, clear, and receive instant predictions, making the app intuitive and engaging."
-        ],
-        "technologies": [
-            "React", "Python", "Jupyter", "Fast API"
-        ],
-        "github": "https://github.com/gabigoranov/QuickDrawWithKNN",
-        "demo": "not found"
-    }
+  {
+    "image": null,
+    "video": "/videos/ai-learning.webm",
+    "title": "AI Learning Platform",
+    "descriptions": [
+      "Developed a full-stack study platform that automatically generates learning materials such as flashcards, mind maps, and quizzes.",
+      "Built a complete authenticated frontend with tools for creating, managing, and reviewing study content.",
+      "Implemented gamification and competitive features, including points and friend-based challenges, to increase user engagement."
+    ],
+    "technologies": [".NET", "EFC", "PostgreSQL", "React", "Supabase", "Fast API", "Python", "ML"],
+    "github": "https://github.com/gabigoranov/Study-Platform",
+    "demo": null
+  },
+  {
+    "image": "/images/freshly.png",
+    "title": "Freshly - Online Farmers' Market",
+    "descriptions": [
+      "Developed a full-stack online farmers' market platform with a .NET Core MVC website for users, sellers, and organizations, enabling seamless product management and orders.",
+      "Created a Flutter mobile application allowing users to browse products, place orders, track deliveries, and communicate with local farmers in real-time.",
+      "Integrated secure authentication, role-based access, email services, and intuitive interfaces across web and mobile, ensuring a smooth experience for both customers and sellers."
+    ],
+    "technologies": [".NET", "EFC", "SQL Server", "Flutter", "Firebase"],
+    "github": "https://github.com/gabigoranov/farmers-market",
+    "demo": "https://freshly-groceries.com",
+    "video": null
+  },
+  {
+    "image": "/images/clockr.png",
+    "title": "ClockR - Modern chess clock",
+    "descriptions": [
+      "Developed and published a feature-rich mobile application using Flutter, designed for chess enthusiasts needing a reliable digital chess clock.",
+      "Implemented fully customizable time controls, allowing users to set classical, rapid, blitz, or custom game modes tailored to their preferences.",
+      "Integrated alarms and notifications for move timing, game start/end, and turn changes, enhancing usability and improving game experience."
+    ],
+    "technologies": ["Flutter"],
+    "github": "https://github.com/gabigoranov/ClockR",
+    "demo": "https://play.google.com/store/apps/details?id=com.clockr.chess",
+    "video": null
+  },
+  {
+    "image": "/images/quickdraw.png",
+    "title": "Predicting sketches with KNN",
+    "descriptions": [
+      "Built a machine learning-powered application that classifies user-drawn sketches in real-time using a custom KNN algorithm.",
+      "Preprocessed sketches with PCA and StandardScaler to improve model accuracy and reduce computational load for fast predictions.",
+      "Designed an interactive React-based interface allowing users to draw, clear, and receive instant predictions, making the app intuitive and engaging."
+    ],
+    "technologies": ["React", "Python", "Jupyter", "Fast API"],
+    "github": "https://github.com/gabigoranov/QuickDrawWithKNN",
+    "demo": null,
+    "video": null
+  }
 ]

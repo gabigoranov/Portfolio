@@ -119,7 +119,9 @@ export default function Certification() {
           "FCE (B2 exam) – achieved C1-level English proficiency",
           'National autumn tournament "John Atanasov" 2024 – 4th place',
           "25th Students' Conference of HSSIMI – Golden Medal",
-          "25th Students' Section of HSSIMI – Golden Medal"
+          "25th Students' Section of HSSIMI – Golden Medal",
+          "5th place, 'Джон Атанасов' (11th grade)",
+          "4th place, 'Джон Атанасов' (10th grade)",
         ]}/>
       </div>
       <div className="certification__gallery" ref={galleryRef}>
