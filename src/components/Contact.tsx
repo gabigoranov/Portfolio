@@ -147,7 +147,7 @@ export default function Contact() {
         </form>
         <div className="contact-info__container">
           <ContactComponent icon={MdMailOutline} title="Email" value="gabi.goranov.work@gmail.com"/>
-          <ContactComponent icon={MdOutlinePhone} title="Phone" value="+359 89 658 2578"/>
+          <ContactComponent icon={MdOutlinePhone} title="Phone" value="+359 89 658 3578"/>
           <ContactComponent icon={FaGithub} title="Github" value="gabigoranov"/>
           <ContactComponent icon={FaInstagram} title="Instagram" value="gabi.goranov"/>
         </div>

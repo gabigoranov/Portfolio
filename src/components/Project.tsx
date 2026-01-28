@@ -18,7 +18,7 @@ export default function Project({
         <div className="project__img-wrapper">
           <img src={image} alt="demo-img" className="project__img" />
         </div>
-      ) : (
+      ) : video ? (
         <video
           className="project__video"
           src={video!}
@@ -27,8 +27,12 @@ export default function Project({
           loop
           playsInline
         />
+      ) : (
+        <div className="project__img-wrapper">
+          <h3 className="project__img-under-construction-wrapper">Under Construction...</h3>
+        </div>
       )}
-      <div>
+      <div className="project__description-wrapper">
         <h3 className="project__title">{title}</h3>
         <UnorderedList elements={descriptions} />
         <div className="project__technologies">

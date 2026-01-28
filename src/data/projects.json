@@ -13,6 +13,25 @@
     "demo": null
   },
   {
+    "image": null,
+    "video": null,
+    "title": "Minimalistic Workflow Manager",
+    "descriptions": [
+      "Cross-platform desktop application for automating workflows, including opening code editors, documents, websites, and applications based on custom events.",
+      "Supports auto-startup, multi-monitor app placement, and seamless integration with system-level APIs for enhanced productivity.",
+      "Built with a minimalistic interface focused on speed and efficiency; currently under active development."
+    ],
+    "technologies": [
+      "Avalonia",
+      "C#",
+      "Windows API",
+      "Cross-platform .NET",
+      "Task Automation"
+    ],
+    "github": "https://github.com/gabigoranov/WorkflowManager",
+    "demo": null
+  },
+  {
     "image": "/images/freshly.png",
     "title": "Freshly - Online Farmers' Market",
     "descriptions": [
