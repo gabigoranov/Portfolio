@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../assets/styles/header.css'
 import ThemeToggle from './ThemeToggle';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -19,10 +20,10 @@ export default function Header() {
                 <span className="logo">Gabriel</span>
                 <div className='header__navbar-container'>
                     <ul className="navbar">
-                        <li className="navbar__item"><a className='nav__link' href='/#about'>About</a></li>
-                        <li className="navbar__item"><a className='nav__link' href='/#projects'>Projects</a></li>
-                        <li className="navbar__item"><a className='nav__link' href="/#contact">Contact</a></li>
-                        <li className="navbar__item"><a className='nav__link' href="/certificates">Certificates</a></li>
+                        <Link to="/#about"><li className="navbar__item"><a className='nav__link' href='/#about'>About</a></li></Link>
+                        <Link to="/#projects"><li className="navbar__item"><a className='nav__link' href='/#projects'>Projects</a></li></Link>
+                        <Link to="/#contact"><li className="navbar__item"><a className='nav__link' href="/#contact">Contact</a></li></Link>
+                        <Link to="/certificates"><li className="navbar__item"><a className='nav__link'>Certificates</a></li></Link>
                     </ul>
                     <ThemeToggle />
                 </div>

@@ -33,14 +33,12 @@ header {
 }
 
 .header--scrolled {
-  width: 50%;
+  width: 60%;
 }
 
 header:hover{
     height: 70px;
 }
-
-
 
 .logo{
     font-size: 2rem;
@@ -51,6 +49,7 @@ header:hover{
     list-style: none;
     display: flex;
     gap: 1rem;
+    padding: 0;
 }
 
 .nav__link{
