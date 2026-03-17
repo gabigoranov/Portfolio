@@ -71,31 +71,31 @@ export default function Certification() {
 
     const handleMove = (e: PointerEvent | TouchEvent) => {
       if (!isDragging || !dragElement) return;
-      
+
       currentY = getY(e);
       const dy = currentY - startY;
-      dragElement.style.transform = `translateY(${dy}px)`;
-      
+      dragElement.style.transform = `translateX(-50%) translateY(${dy}px)`;
+
       e.preventDefault();
     };
 
     const handleUp = (e: PointerEvent | TouchEvent) => {
       if (!isDragging || !dragElement) return;
-      
+
       isDragging = false;
       const dy = currentY - startY;
       const threshold = dragElement.offsetHeight * 0.4;
 
       if (dy > threshold) {
-        // Swipe up - move last to first
-        setCertificates(prev => [prev[prev.length - 1], ...prev.slice(0, prev.length - 1)]);
-      } else if (dy < -threshold) {
-        // Swipe down - move first to last
+        // Swipe up - move first to last (bottom card comes to center)
         setCertificates(prev => [...prev.slice(1), prev[0]]);
+      } else if (dy < -threshold) {
+        // Swipe down - move last to first (top card comes to center)
+        setCertificates(prev => [prev[prev.length - 1], ...prev.slice(0, prev.length - 1)]);
       }
 
       dragElement.style.transition = 'transform 0.3s ease';
-      dragElement.style.transform = 'translateY(0)';
+      dragElement.style.transform = 'translateX(-50%) translateY(0)';
       dragElement = null;
 
       if ('pointerId' in e && typeof container.releasePointerCapture === 'function') {
@@ -136,19 +136,19 @@ export default function Certification() {
           "5th place, 'Джон Атанасов' (11th grade)",
           "4th place, 'Джон Атанасов' (10th grade)",
         ]}/>
-        
+
         {/* Button to navigate to the Certificate Gallery */}
         <Link to="/certificates" className="certification__gallery-btn">
           View All Certificates
         </Link>
       </div>
-      
+
       {/* Certificate carousel - 1 big center with 2 smaller behind */}
       <div className="certification__carousel" ref={galleryRef}>
         {/* Top certificate (behind) */}
         <div className="certification__card certification__card--top">
-          <img 
-            src={certificates[2]?.image} 
+          <img
+            src={certificates[2]?.image}
             alt={certificates[2]?.alt}
             className="certification__card-image"
             loading="lazy"
@@ -157,11 +157,14 @@ export default function Certification() {
             <p className="certification__card-title">{certificates[2]?.title}</p>
           </div>
         </div>
-        
+
         {/* Center certificate (front, draggable) */}
-        <div className="certification__card certification__card--center">
-          <img 
-            src={certificates[1]?.image} 
+        <div 
+          key={certificates[1]?.id}
+          className="certification__card certification__card--center certification__card--center--animated"
+        >
+          <img
+            src={certificates[1]?.image}
             alt={certificates[1]?.alt}
             className="certification__card-image"
             loading="lazy"
@@ -170,11 +173,11 @@ export default function Certification() {
             <p className="certification__card-title">{certificates[1]?.title}</p>
           </div>
         </div>
-        
+
         {/* Bottom certificate (behind) */}
         <div className="certification__card certification__card--bottom">
-          <img 
-            src={certificates[0]?.image} 
+          <img
+            src={certificates[0]?.image}
             alt={certificates[0]?.alt}
             className="certification__card-image"
             loading="lazy"
