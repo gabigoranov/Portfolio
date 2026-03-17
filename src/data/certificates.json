@@ -1,0 +1,86 @@
+[
+  {
+    "id": "bas_2",
+    "image": "/images/Certificates/BAS_2.jpg",
+    "title": "BAS - 1st Place",
+    "description": "1st place, 11th Students' Scientific Session, BAS (Bulgarian Academy of Sciences)",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "bas",
+    "image": "/images/Certificates/BAS.jpg",
+    "title": "BAS - Scientific Session",
+    "description": "Students' Scientific Session certificate from Bulgarian Academy of Sciences",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "english_c1",
+    "image": "/images/Certificates/EnglishC1.jpg",
+    "title": "FCE - C1 Level",
+    "description": "FCE (B2 exam) – achieved C1-level English proficiency",
+    "orientation": "vertical"
+  },
+  {
+    "id": "hssimi_1",
+    "image": "/images/Certificates/HSSIMI_1.jpg",
+    "title": "HSSIMI - Golden Medal",
+    "description": "25th Students' Conference of HSSIMI – Award of Excellence & Golden Medal",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "hssimi_2",
+    "image": "/images/Certificates/HSSIMI_2.jpg",
+    "title": "HSSIMI - Golden Medal",
+    "description": "25th Students' Section of HSSIMI – Award of Excellence & Golden Medal",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "ichn",
+    "image": "/images/Certificates/ICHN.jpg",
+    "title": "10th place in 'I Can, Here And Now', 2024",
+    "description": "International Certificate of Health and Natural Sciences",
+    "orientation": "vertical"
+  },
+  {
+    "id": "kgl",
+    "image": "/images/Certificates/KGL.jpg",
+    "title": "KGL Certificate",
+    "description": "KGL certification achievement",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "noit",
+    "image": "/images/Certificates/NOIT.jpg",
+    "title": "NOIT 2025 - 5th Place",
+    "description": "5th place, NOIT 2025, Software Application (10th grade) - National Olympiad in Information Technology",
+    "orientation": "vertical"
+  },
+  {
+    "id": "national_olympiad",
+    "image": "/images/Certificates/NationalEnglishOlympiad.jpg",
+    "title": "National English Olympiad",
+    "description": "National autumn tournament participation certificate",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "scholarship",
+    "image": "/images/Certificates/Scholarship.jpg",
+    "title": "Scholarship Award",
+    "description": "Academic scholarship recognition",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "softuni",
+    "image": "/images/Certificates/Softuni.png",
+    "title": "SoftUni Diploma",
+    "description": "Software University Diploma in C# Web Development",
+    "orientation": "vertical"
+  },
+  {
+    "id": "student_of_year",
+    "image": "/images/Certificates/StudentOfTheYear.jpg",
+    "title": "Student of the Year",
+    "description": "Student of the Year, Montana award",
+    "orientation": "vertical"
+  }
+]

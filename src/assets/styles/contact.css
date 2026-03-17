@@ -52,7 +52,7 @@
 
 .contact__button:hover{
     background: var(--primary);
-    color: var(--text-dark);
+    color: var(--text-white);
 }
 
 .contact-info__container{
