@@ -20,10 +20,18 @@ export default function Header() {
                 <span className="logo">Gabriel</span>
                 <div className='header__navbar-container'>
                     <ul className="navbar">
-                        <Link to="/#about"><li className="navbar__item nav__link">About</li></Link>
-                        <Link to="/#projects"><li className="navbar__item nav__link">Projects</li></Link>
-                        <Link to="/#contact"><li className="navbar__item nav__link">Contact</li></Link>
-                        <Link to="/certificates"><li className="navbar__item nav__link">Certificates</li></Link>
+                        <li className="navbar__item">
+                            <Link to="/#about" className="nav__link">About</Link>
+                        </li>
+                        <li className="navbar__item">
+                            <Link to="/#projects" className="nav__link">Projects</Link>
+                        </li>
+                        <li className="navbar__item">
+                            <Link to="/#contact" className="nav__link">Contact</Link>
+                        </li>
+                        <li className="navbar__item">
+                            <Link to="/certificates" className="nav__link">Certificates</Link>
+                        </li>
                     </ul>
                     <ThemeToggle />
                 </div>

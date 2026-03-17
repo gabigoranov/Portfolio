@@ -31,7 +31,8 @@
 
 .hero__cta {
     display: flex;
-    gap: var(--small-indent)
+    gap: var(--small-indent);
+    flex-wrap: wrap;
 }
 
 .hero__cta > a {

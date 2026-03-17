@@ -13,6 +13,7 @@ export default function Hero() {
                 <div className="hero__cta">
                     <a href='#projects'>View Projects</a>
                     <a href='#contact'>Contact Me</a>
+                    <a href='/resume.pdf'>Resume</a>
                 </div>
                 <div className="scroll-indicator">
                     <div className="scroll-dot"></div>
