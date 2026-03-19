@@ -13,11 +13,24 @@
     "demo": null
   },
   {
-    "image": null,
-    "video": null,
-    "title": "Minimalistic Workflow Manager",
+    "image": "/images/freshly.png",
+    "title": "Freshly - Online Farmers' Market",
     "descriptions": [
-      "Cross-platform desktop application for automating workflows, including opening code editors, documents, websites, and applications based on custom events.",
+      "Developed a full-stack online farmers' market platform with a .NET Core MVC website for users, sellers, and organizations, enabling seamless product management and orders.",
+      "Created a Flutter mobile application allowing users to browse products, place orders, track deliveries, and communicate with local farmers in real-time.",
+      "Integrated secure authentication, role-based access, email services, and intuitive interfaces across web and mobile, ensuring a smooth experience for both customers and sellers."
+    ],
+    "technologies": [".NET", "EFC", "SQL Server", "Flutter", "Firebase"],
+    "github": "https://github.com/gabigoranov/farmers-market",
+    "demo": "https://freshly-groceries.com",
+    "video": null
+  },
+  {
+    "image": "/images/flowstate.png",
+    "video": null,
+    "title": "FlowState - Workflow Manager",
+    "descriptions": [
+      "Desktop application for automating workflows, including opening code editors, documents, websites, and applications.",
       "Supports auto-startup, multi-monitor app placement, and seamless integration with system-level APIs for enhanced productivity.",
       "Built with a minimalistic interface focused on speed and efficiency; currently under active development."
     ],
@@ -30,19 +43,6 @@
     ],
     "github": "https://github.com/gabigoranov/WorkflowManager",
     "demo": null
-  },
-  {
-    "image": "/images/freshly.png",
-    "title": "Freshly - Online Farmers' Market",
-    "descriptions": [
-      "Developed a full-stack online farmers' market platform with a .NET Core MVC website for users, sellers, and organizations, enabling seamless product management and orders.",
-      "Created a Flutter mobile application allowing users to browse products, place orders, track deliveries, and communicate with local farmers in real-time.",
-      "Integrated secure authentication, role-based access, email services, and intuitive interfaces across web and mobile, ensuring a smooth experience for both customers and sellers."
-    ],
-    "technologies": [".NET", "EFC", "SQL Server", "Flutter", "Firebase"],
-    "github": "https://github.com/gabigoranov/farmers-market",
-    "demo": "https://freshly-groceries.com",
-    "video": null
   },
   {
     "image": "/images/clockr.png",
